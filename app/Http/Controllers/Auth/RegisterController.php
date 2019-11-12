@@ -72,7 +72,6 @@ class RegisterController extends Controller
             $client = new \GuzzleHttp\Client();
             $geocoder = new Geocoder($client);
             $geocoder->setApiKey(config('geocoder.key'));
-//            $geocoder->setCountry(config('UK'));
             $details = $geocoder->getCoordinatesForAddress($data['location_name']);
 
             $data['location_longitude'] = $details['lng'];

@@ -90,7 +90,11 @@ class WeatherController extends Controller
 
         if (!empty($timeMachine)) {
             foreach ($days as $key => $day) {
-                $returnData[$key] = $timeMachine[$day]->daily()->summary();
+                $returnData[$key] = [
+                    "date"  => $day,
+                    "weather" => $timeMachine[$day]->daily()->summary(),
+
+                ];
             }
         }
         return response()->json($returnData);
