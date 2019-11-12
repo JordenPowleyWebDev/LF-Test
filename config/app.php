@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         Spatie\Geocoder\GeocoderServiceProvider::class,
+        Tightenco\Ziggy\ZiggyServiceProvider::class,
 
         /*
          * Application Service Providers...

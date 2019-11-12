@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use DmitryIvanov\DarkSkyApi\DarkSkyApi;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // Get the current authed user
+        $user = User::findOrFail(Auth::id());
+
+        return view('home', [
+            "user"      => $user,
+        ]);
     }
 }

@@ -4,8 +4,76 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "67fce2861ca9307aef5ccd04060be845",
+    "content-hash": "c24cb0a6dc09f29f57f51c2394e013ae",
     "packages": [
+        {
+            "name": "dmitry-ivanov/dark-sky-api",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dmitry-ivanov/dark-sky-api.git",
+                "reference": "6a4a0e9a19a1ab8f7f5bcfab4c02d03c3a140428"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dmitry-ivanov/dark-sky-api/zipball/6a4a0e9a19a1ab8f7f5bcfab4c02d03c3a140428",
+                "reference": "6a4a0e9a19a1ab8f7f5bcfab4c02d03c3a140428",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^6.3",
+                "php": ">=5.6",
+                "psr/http-message": "^1.0"
+            },
+            "require-dev": {
+                "illuminate/contracts": "^5.1|^6.0",
+                "illuminate/support": "^5.1|^6.0",
+                "mockery/mockery": "^0.9|^1.0",
+                "phpunit/phpunit": "^4.0|^5.0|^6.0|^7.0|^8.0",
+                "vlucas/phpdotenv": "^3.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "DmitryIvanov\\DarkSkyApi\\Adapters\\Laravel\\DarkSkyApiServiceProvider"
+                    ],
+                    "aliases": {
+                        "DarkSkyApi": "DmitryIvanov\\DarkSkyApi\\Adapters\\Laravel\\Facades\\DarkSkyApi"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "DmitryIvanov\\DarkSkyApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dmitry Ivanov",
+                    "email": "dmitry.g.ivanov@gmail.com"
+                }
+            ],
+            "description": "PHP Library for the Dark Sky API.",
+            "keywords": [
+                "api",
+                "dark",
+                "forecast",
+                "laravel",
+                "php",
+                "sky",
+                "weather"
+            ],
+            "time": "2019-09-13T16:46:15+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -3126,6 +3194,57 @@
                 "dump"
             ],
             "time": "2019-10-13T12:02:04+00:00"
+        },
+        {
+            "name": "tightenco/ziggy",
+            "version": "v0.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tightenco/ziggy.git",
+                "reference": "4c4b29bc658153f0771b0a145173ce83a7b6b885"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tightenco/ziggy/zipball/4c4b29bc658153f0771b0a145173ce83a7b6b885",
+                "reference": "4c4b29bc658153f0771b0a145173ce83a7b6b885",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=5.4@dev"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.6",
+                "orchestra/testbench": "~3.6"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tightenco\\Ziggy\\ZiggyServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tightenco\\Ziggy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Coulbourne",
+                    "email": "daniel@tighten.co"
+                },
+                {
+                    "name": "Matt Stauffer",
+                    "email": "matt@tighten.co"
+                }
+            ],
+            "description": "Generates a Blade directive exporting all of your named Laravel routes. Also provides a nice route() helper function in JavaScript.",
+            "time": "2019-10-18T22:42:36+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
